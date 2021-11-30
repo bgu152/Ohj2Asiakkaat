@@ -4,16 +4,23 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<script src="scripts/main.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<title>Listaa autot</title>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<title>Listaa asiakkaat</title>
+
+
 </head>
 <body>
 	
 <table id="listaus">
 	<thead>		
 		<tr>
+			<th colspan = "5" class="oikealle"><span id = "uusiAsiakas">Lisää uusi asiakas</span></th>
+		</tr>
+		<tr>
 			<th class= "oikealle">Hakusana: </th>
-			<th colspan = "2"><input type="text" id = "hakusana"></th>
+			<th colspan = "3"><input type="text" id = "hakusana"></th>
 			<th><input type="button" value="hae" id= "hakunappi"></th>
 		</tr>		
 		<tr>
@@ -32,6 +39,10 @@
 		$(document).ready(function(){
 			
 			haeAsiakkaat();
+			
+			$("#uusiAsiakas").click(function(){
+				document.location="lisaaasiakas.jsp"
+			})
 
 			
 			$("#hakunappi").click(function(){
